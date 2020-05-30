@@ -68,11 +68,14 @@ class Form extends Component {
         if (this.state.answers[key] === "")
           return this.openDialog("All the questions are mandatory.");
       }
-      const records = JSON.parse(localStorage.getItem("feedback")) || [];
-      console.log(records);
-      records.push({ ...this.state });
-      console.log(records);
-      localStorage.setItem("feedback", JSON.stringify(records));
+      const records = JSON.parse(localStorage.getItem("feedbacks")) || [];
+      const currentRecord = { ...this.state };
+      delete currentRecord["error"];
+      delete currentRecord["dialog"];
+      delete currentRecord["msg"];
+      records.push(currentRecord);
+      localStorage.setItem("feedbacks", JSON.stringify(records));
+      this.openDialog("Thank you for completing the information.");
     }
   };
 
