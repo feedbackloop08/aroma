@@ -5,7 +5,7 @@ class Table extends Component {
     responses: [],
   };
   componentDidMount() {
-    this.setState({ responses: JSON.parse(localStorage.getItem("feedbacks")) });
+    this.setState({ responses: JSON.parse(localStorage.getItem("feedbacks")) || [] });
   }
   render() {
     const columns = ["Name", "Email", "Phone", "Service", "Beverage", "Cleanliness", "Overall"];

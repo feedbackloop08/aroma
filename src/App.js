@@ -6,7 +6,7 @@ import Table from "./Components/Table";
 
 class App extends Component {
   state = {
-    active: localStorage.getItem("activeTab"),
+    active: localStorage.getItem("activeTab") || "form",
   };
 
   switchTab(tab) {

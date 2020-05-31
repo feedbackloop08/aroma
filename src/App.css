@@ -24,6 +24,7 @@
   cursor: pointer;
   background-color: #fff;
   font-size: 18px;
+  font-weight: 500;
   outline: none;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .form-title {
-  color: #2c63b6;
+  color: #155dc8;
   font-size: 1.2em;
 }
 
@@ -78,7 +79,6 @@ p {
   height: 30px;
   font-size: 18px;
   border-radius: 5px;
-  color: #58627c;
 }
 
 small {
@@ -169,7 +169,7 @@ input[type="radio"] {
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: #8971c8;
+  color: #764be2;
 }
 
 .actions {
@@ -270,7 +270,7 @@ h1 {
 
 .header > div {
   background-color: #efe9fa;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .content > div {

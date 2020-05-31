@@ -22,6 +22,11 @@ class Form extends Component {
     this.setState({ dialog: true, msg: msg });
   }
 
+  resetForm() {
+    this.setState({ name: "", phone: "", email: "" });
+    document.getElementById("feedback-form").reset();
+    this.openDialog("Thank you for completing the information.");
+  }
   handleFieldChange = (e) => {
     Object.assign(this.state.error, { nameErr: false, emailErr: false, phoneErr: false });
     const field = e.target.name;
@@ -76,6 +81,7 @@ class Form extends Component {
       records.push(currentRecord);
       localStorage.setItem("feedbacks", JSON.stringify(records));
       this.openDialog("Thank you for completing the information.");
+      this.resetForm();
     }
   };
 
@@ -112,7 +118,7 @@ class Form extends Component {
     );
 
     return (
-      <form className="form-wrapper" onSubmit={this.handleSubmit}>
+      <form className="form-wrapper" onSubmit={this.handleSubmit} id="feedback-form">
         <div className="input-wrapper">
           <label>Your Name </label>
           <input

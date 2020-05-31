@@ -9,15 +9,8 @@ body,
 }
 body {
   background-color: #f5f5f5;
-  color: #5a637c;
   font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* Header: AFC2DF
-Text: #414c69
-Accent: #8971c8
-Error: ED4D83
-Focus: B39FE1 */
