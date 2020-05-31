@@ -193,7 +193,7 @@ input[type="radio"] {
 }
 
 .dialog {
-  max-width: 500px;
+  max-width: 400px;
   height: 300px;
   background-color: #fff;
   display: flex;
@@ -209,6 +209,13 @@ input[type="radio"] {
 
 .dialog p {
   flex-basis: 100%;
+  color: #000;
+  font-size: 20px;
+}
+
+.dialog button {
+  flex-basis: 100%;
+  margin: 0 100px;
 }
 
 button {
@@ -219,7 +226,7 @@ button {
   box-shadow: 1px 2px 5px #bebebe;
   border-radius: 7px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   outline: 0;
   cursor: pointer;
 }
@@ -281,6 +288,9 @@ h1 {
   border-width: 0px 1px 1px 1px;
 }
 
+.mobile {
+  display: none;
+}
 @media screen and (min-width: 951px) and (max-width: 1260px) {
   .form-wrapper > .input-wrapper {
     flex-basis: 25%;
@@ -305,14 +315,53 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
-  .feedback > p {
-    display: flex;
-  }
   .feedback > * {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    display: none;
+  }
+  .table {
+    background-color: #fff;
+  }
+  .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(238, 98, 98);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .input-wrapper input {
+    font-size: 14px;
+    height: 24px;
+  }
+  .appbar div {
     flex-basis: 100%;
   }
+  .feedback > * {
+    justify-content: flex-start;
+    font-size: 14px;
+  }
   .options {
-    justify-content: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+  .options > * {
+    width: 100%;
+  }
+  .header {
+    display: none;
   }
 }

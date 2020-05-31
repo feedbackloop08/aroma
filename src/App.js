@@ -6,8 +6,13 @@ import Table from "./Components/Table";
 
 class App extends Component {
   state = {
-    active: "form",
+    active: localStorage.getItem("activeTab"),
   };
+
+  switchTab(tab) {
+    this.setState({ active: tab });
+    localStorage.setItem("activeTab", tab);
+  }
   render() {
     const activeTab = this.state.active === "form";
     const form = (
@@ -23,15 +28,12 @@ class App extends Component {
           <div
             className={activeTab ? "active" : ""}
             onClick={() => {
-              this.setState({ active: "form" });
+              this.switchTab("form");
             }}
           >
             Form
           </div>
-          <div
-            className={!activeTab ? "active" : ""}
-            onClick={() => this.setState({ active: "table" })}
-          >
+          <div className={!activeTab ? "active" : ""} onClick={() => this.switchTab("table")}>
             Table
           </div>
         </div>

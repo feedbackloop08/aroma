@@ -21,7 +21,7 @@ class Table extends Component {
 
           {this.state.responses.map((res, i) => {
             return (
-              <div className="content">
+              <div className="content" key={i}>
                 <div>{res.name}</div>
                 <div>{res.email}</div>
                 <div>+91-{res.phone}</div>
@@ -32,6 +32,7 @@ class Table extends Component {
               </div>
             );
           })}
+          <p className="mobile">Please open this page on a bigger screen.</p>
         </div>
       </div>
     );
